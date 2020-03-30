@@ -62,7 +62,7 @@ def convert_date_to_us_date(date_obj):
     return f'{date_obj.month}/{date_obj.day}/{date_obj.year}'
 
 
-@lru_cache(maxsize=128)
+@lru_cache(maxsize=512)
 def convert_us_date_to_days_number(date_str, initial_date):
     """
     Converts a given date in format 'mm/dd/YYYY' to the number of days since initial_date
